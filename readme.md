@@ -63,3 +63,26 @@ curl -X POST -F "file=@<path-to-your-csv-file>" http://localhost:3000/upload
 ```bash
 curl -X GET http://localhost:3000/report/age-distribution
 ```
+
+
+
+## Assumptions
+1. **Database Assumptions**:
+   - A MySQL database is already set up and accessible using the `.env` configuration.
+   - The `users` table must exist in the database with the specified schema.
+   - The users table does not have any unique constraints or indexes beyond the id primary key. Adding indexes for optimization can be considered based on usage patterns.
+   - The additional_info column is used to store non-mandatory and dynamic fields as JSON.
+   - No database-level validation is enforced (e.g., for age ranges, email formats). Validation is assumed to happen in the application layer.
+
+2. **CSV File Assumptions**:
+   - The CSV file will always have headers in the first row.
+   - Mandatory fields: `name.firstName`, `name.lastName`, and `age`.
+   - Any additional columns in the CSV file will be stored in the `additional_info` column as JSON.
+
+3. **Application Assumptions**:
+   - The server will run on the port specified in the `.env` file (default: `3000`).
+   - The database column `additional_info` is used to store all dynamic and non-mandatory fields.
+
+4. **General Assumptions**:
+   - The uploaded file size will not exceed the system's file size limits.
+   - Any invalid or missing fields in the CSV will be handled gracefully.
