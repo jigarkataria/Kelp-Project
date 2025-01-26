@@ -1,0 +1,6 @@
+id,name.firstName,name.lastName,age,email,additional_info.address,additional_info.phone
+1,John,Doe,25,john.doe@example.com,123 Main St,555-1234
+2,Jane,Smith,17,jane.smith@example.com,456 Oak Ave,555-5678
+3,Michael,Johnson,40,michael.johnson@example.com,789 Pine Rd,555-8765
+4,Emily,Davis,30,emily.davis@example.com,321 Maple Dr,555-4321
+5,Robert,Brown,55,robert.brown@example.com,654 Elm St,555-6789
