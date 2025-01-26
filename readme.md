@@ -4,8 +4,8 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/jigarkataria/Kelp-Project
+cd Kelp-Project
 ```
 
 ### 2. Install Dependencies
